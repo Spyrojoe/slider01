@@ -12,6 +12,13 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acro
 	font: inherit;
 	vertical-align: baseline;
 }
+body{
+	padding-top: 200px;
+}
+h2{
+	color: #fff;
+	font-family: "helvetica neue". helvetica, arial, sans-serif;
+}
 ol, ul{
 	list-style: none;
 }
@@ -29,12 +36,11 @@ ol, ul{
 .stage{
 	margin-bottom: 30px;
 	outline: 2px green solid;
-	position: relative;
 }
 .thing{
-	position: absolute;
-	width: 190px;
+	/*width: 190px;
 	height: 80px;
+	max-height: 190px;*/
 	background: rgba(0,0,0,.6);
 }
 .btngrp{
