@@ -47,10 +47,15 @@
 		</div>
 
 		<div class="btngrp">
-			<button id="move">Move</button>
-			<button id="animate">Animate</button>
-			<button id="transition">Transition</button>
-			<button id="go">Go</button>
+			<div>
+				<button id="slide-left">Slide Left</button>
+				<button id="slide-right">Slide Right</button>
+			</div>
+			<div>
+				<button id="move">Move</button>
+				<button id="animate">Animate</button>
+				<button id="go">Go</button>
+			</div>
 		</div>
 
 		</div><!-- end wrap -->
@@ -58,16 +63,7 @@
 		<script>
 			$(document).ready(function(){
 
-				//var thingHeight = $("#thing01").height();
-
-				var sum = 0;
-				$(".thing").each(function(i){
-					sum += $(this).width();
-				});
-				console.log(sum);
-
-				$("#stage").width(sum);
-				//$(".stage").height(thingHeight);
+				$("#stage").height(440).width(1160);
 
 				$("#move").click(function(){
 					$("#thing01").css("left", "200px");
@@ -79,9 +75,14 @@
 					}, 600);
 				});
 
-				$("#transition").click(function(){
-					$("#thing01").transition({
+				$("#slide-left").click(function(){
+					$(".thing").transition({
 						x : "+=24px"
+					});
+				});
+				$("#slide-right").click(function(){
+					$(".thing").transition({
+						x : "-=24px"
 					});
 				});
 
