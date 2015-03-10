@@ -10,10 +10,26 @@
 	<body>
 		<div class="wrap">
 			
-		<div class="stage">
+		<div class="stage" id="stage">
 			<div class="thing" id="thing01">
 				<h2>Here's a section</h2>
 				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+				<img src="http://placehold.it/190x80.gif">
+			</div>
+			<div class="thing" id="thing02">
+				<h2>Another section</h2>
 				<img src="http://placehold.it/190x80.gif">
 				<img src="http://placehold.it/190x80.gif">
 				<img src="http://placehold.it/190x80.gif">
@@ -34,6 +50,7 @@
 			<button id="move">Move</button>
 			<button id="animate">Animate</button>
 			<button id="transition">Transition</button>
+			<button id="go">Go</button>
 		</div>
 
 		</div><!-- end wrap -->
@@ -41,7 +58,15 @@
 		<script>
 			$(document).ready(function(){
 
-				var thingHeight = $("#thing01").height();
+				//var thingHeight = $("#thing01").height();
+
+				var sum = 0;
+				$(".thing").each(function(i){
+					sum += $(this).width();
+				});
+				console.log(sum);
+
+				$("#stage").width(sum);
 				//$(".stage").height(thingHeight);
 
 				$("#move").click(function(){
